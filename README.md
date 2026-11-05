@@ -3,5 +3,5 @@
 ## My java Homework Repo. I'm not sure yet of the folder structure, below is the current structure
 
 ```text
-Main -> Homework -> tar1
+Main -> tar1
 ```
