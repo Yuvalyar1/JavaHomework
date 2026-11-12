@@ -65,7 +65,7 @@ public class EmailMessage extends Message implements IDigital { //implements = i
 
     @Override
     public String printCommunicationMethod() {
-        return "Sent via Email Server";
+        return " Sent via Email Server";
     }
 
     @Override
