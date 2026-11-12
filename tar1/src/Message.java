@@ -28,7 +28,7 @@ public abstract class Message {
         return this.content;
     }
 
-    /*
+    /* Testing sendDate logic in constructor
     public boolean setSendDate(Date datee){
         if (datee==null) throw new IllegalArgumentException("Date cannot be null");
         if (datee.getClass()!=sendDate.getClass()) throw new IllegalArgumentException("Enter a valid Date");
@@ -38,9 +38,11 @@ public abstract class Message {
     public Date getSendDate() {
         return this.sendDate;
     }
-    public int getMessageId(){
+
+    public int getMessageId() {
         return this.messageId;
     }
+
     public Message(String senderr, String contentt, Date datee) {
         setSender(senderr);
         setContent(contentt);
@@ -55,16 +57,18 @@ public abstract class Message {
         sendDate = new Date();
         this.messageId = idCounter++;
     }
-    public boolean find(ArrayList<String> arr){
-        for (String s : arr){
-            if(this.content.contains(s)) return true;
+
+    public boolean find(ArrayList<String> arr) {
+        for (String s : arr) {
+            if (this.content.contains(s)) return true;
         }
         return false;
     }
 
     @Override
     public String toString() {
-        return "Message ID: "+messageId+"\nSender: " + sender + "\nMessage: " + content + "\nSent on: " + sendDate;
+        return "Message ID: " + messageId + "\nSender: " + sender + "\nMessage: " + content + "\nSent on: " + sendDate;
     }
+
     public abstract String generatePreview();
 }
